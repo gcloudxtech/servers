@@ -114,12 +114,12 @@ network:
       match:
         macaddress: "00:50:56:aa:bb:cc"
       addresses:
-        - 192.168.31.25/24
+        - 10.10.61.25/24
       routes:
         - to: default
-          via: 192.168.31.1
+          via: 10.10.61.1
       nameservers:
-        addresses: [192.168.31.1, 1.1.1.1]
+        addresses: [10.10.61.1, 1.1.1.1]
 ```
 
 Linux/BSD user-data example:
@@ -159,10 +159,10 @@ network:
     nic0:
       match:
         macaddress: "00:50:56:aa:bb:cc"
-      addresses: [192.168.31.30/24]
-      gateway4: 192.168.31.1
+      addresses: [10.10.61.30/24]
+      gateway4: 10.10.61.1
       nameservers:
-        addresses: [192.168.31.1, 1.1.1.1]
+        addresses: [10.10.61.1, 1.1.1.1]
 ```
 
 Passwords placed in GuestInfo are configuration secrets, not a secret vault.
